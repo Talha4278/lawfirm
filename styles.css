@@ -1,0 +1,217 @@
+/* Global Styles */
+body {
+    box-sizing: border-box;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    background-color: black;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem; /* Padding for the logo area */
+    z-index: 2; /* Keep the logo above the banner */
+}
+
+.logo img {
+    height: 80px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem; /* Padding for the nav area */
+    z-index: 3; /* Keep the nav above the banner */
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Banner Styles */
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the banner behind the navbar */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    background: url('top-view-career-guidance-items-judges.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.banner-text {
+    color: #ffffff; /* Sharp white color for text */
+    font-style: italic; /* Italic text */
+    font-size: 5rem; /* Adjust size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+    text-align: center;
+    padding: 20px; /* Optional padding to improve readability */
+}
+
+/* Content Section */
+.content {
+    
+    padding: 2rem;
+   
+    color: #fff;
+}
+
+.lawyer-profiles {
+    padding: 2rem;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+.lawyer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.lawyer {
+    max-width: 300px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lawyer img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.lawyer h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.lawyer p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.lawyer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .lawyer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo img {
+        height: 60px; /* Adjust logo size for smaller screens */
+    }
+    .logo h1 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav a {
+        padding: 8px 12px;
+    }
+}
+.contact-section {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    bottom:0%;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
