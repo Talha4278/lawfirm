@@ -1,225 +1,225 @@
-/* Global Styles */
+/* Base Styles */
 body {
-    box-sizing: border-box;
-    color: #000;
-    font-family: Montserrat, sans-serif;
     margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevents horizontal overflow */
+    font-family: Arial, sans-serif;
 }
 
-/* Header Styles */
 .header {
     display: flex;
     flex-direction: column;
-    height:auto;
-    min-height: 100vh; /* Full height of the viewport */
+    height: auto;
+    min-height: 100vh;
     background-color: black;
     position: relative;
+    background: url('top-view-career-guidance-items-judges.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    padding: 1rem 2rem; /* Padding for the logo area */
-    z-index: 2; /* Keep the logo above the banner */
+    padding: 1rem;
 }
 
 .logo img {
-    height: 80px; /* Adjust as needed */
-    margin-right: 10px;
-}
-
-.logo h1 {
-    margin: 0;
-    color: white;
-    font-size: 1.5rem; /* Responsive font size */
+    max-width: 100px; /* Adjust logo size as needed */
 }
 
 .nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem 2rem; /* Padding for the nav area */
-    z-index: 3; /* Keep the nav above the banner */
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 0;
 }
 
 .nav a {
-    color: #fff;
+    color: white;
+    padding: 1rem;
     text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
 }
 
 .nav a:hover {
-    background-color: #000;
-    color: #fff;
+    text-decoration: underline;
 }
 
-/* Banner Styles */
 .banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-    z-index: 1; /* Place the banner behind the navbar */
     display: flex;
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    background: url('top-view-career-guidance-items-judges.jpg') no-repeat center center;
-    background-size: cover;
-    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
 
 .banner-text {
-    color: #ffffff; /* Sharp white color for text */
-    font-style: italic; /* Italic text */
-    font-size: 3rem; /* Adjust size as needed */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
     text-align: center;
-    padding: 1rem; /* Optional padding to improve readability */
+    font-size: 2rem; /* Adjust font size as needed */
+    padding: 1rem;
 }
 
-/* Content Section */
 .content {
-    
     padding: 2rem;
-    max-width: 1200px; /* Constrain maximum width for large screens */
-    margin: 0 auto; /* Center content horizontally */
-    color: #fff;
 }
 
-.lawyer-profiles {
-    padding: 2rem;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #ffffff;
 }
 
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Lawyer Profiles - Alternating Layout */
 .lawyer-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 2rem; /* Add space between lawyer profiles */
 }
 
 .lawyer {
-    max-width: 300px;
-    width:100%;
-    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between image and description */
+    background-color: #f7f7f7;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* For odd-numbered lawyer items, image on the right */
+.lawyer:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+/* For even-numbered lawyer items, image on the left */
+.lawyer:nth-child(even) {
+    flex-direction: row;
 }
 
 .lawyer img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    width: 150px;  /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .lawyer h3 {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
+    margin: 0;
     color: #333;
 }
 
 .lawyer p {
-    font-size: 1rem;
-    color: #666;
+    margin: 0;
+    color: #555;
 }
 
-.lawyer:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .lawyer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .logo img {
-        height: 60px; /* Adjust logo size for smaller screens */
-    }
-    .logo h1 {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-    }
-    .nav {
-        flex-direction: column;
-        width: 100%;
-        align-items: stretch;
-    }
-    .nav a {
-        padding: 10px;
-        text-align: center;
-    }
-}
+/* Contact Section for Subscribe Page */
 .contact-section {
     padding: 2rem;
-    background-color: #f4f4f4;
-    color: #000;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
-    max-width: 100%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form label {
-    display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #333;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
+.contact-form input,
+.contact-form textarea {
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    padding: 0.75rem;
     border-radius: 4px;
-    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
 }
 
 .contact-form button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background-color: #007bff;
+    padding: 0.75rem;
+    background-color: #333;
     color: white;
+    border: none;
     border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    width: 100%;
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #555;
 }
 
-
-/* Footer Styles */
 .site-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
     text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    bottom:0%;
 }
 
-.site-footer a {
-    color: #fff;
-    text-decoration: none;
-}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header {
+        background-size: contain;
+    }
 
-.site-footer a:hover {
-    text-decoration: underline;
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .banner-text {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .content,
+    .contact-section {
+        padding: 1rem;
+    }
+
+    .contact-section {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Lawyer Profiles - Stack Vertically on Mobile */
+    .lawyer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lawyer:nth-child(odd),
+    .lawyer:nth-child(even) {
+        flex-direction: column; /* Stack image and description */
+    }
+
+    .lawyer img {
+        width: 100px; /* Smaller size for mobile */
+        height: 100px;
+    }
 }
